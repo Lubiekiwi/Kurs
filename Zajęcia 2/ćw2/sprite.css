@@ -1,0 +1,11 @@
+.sprite{
+    width:90px;
+    height:90px;
+    background:url("sprites.jpg");
+}
+.sprite:hover{
+    background-position: 0 -90px;
+}
+.sprite:active{
+    background-position: 0 -180px;
+}

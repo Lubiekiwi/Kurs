@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gra</title>
+    <style>
+      body{
+        margin:0;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100vw;
+        height:100vh;
+      }
+      *{
+        box-sizing:border-box;
+      }
+      main *{
+        position: absolute;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+      }
+      main{
+        position: relative;
+      }
+    </style>
+</head>
+<body>
+    
+<script>
+
+  let game = {
+
+    // lives:5,
+    // declives(){
+    //   this.live--;
+    //   document.querySelector(".lives")innerHTML = this.lives,
+      
+    // };
+
+    plane : document.createElement("main"),
+    setPlane(){
+      this.plane.style.border = "2px dashed green";
+      document.body.append(this.plane);
+
+      console.log(window.screen.width);
+      console.log(window.screen.height);
+
+      let dim = 0;
+      if(window.innerWidth > window.innerHeight){
+        dim = window.innerHeight
+      }else{
+        dim = window.innerWidth
+      }
+  
+      this.plane.style.width = dim + "px";
+      this.plane.style.height = dim + "px";
+    },
+
+    walls:{
+      wallsTemplates: [
+        [
+          [0,0,32,5],
+          [0,15,20,5],
+          [32,0,5,30],
+          [20,15,5,30],
+          [95,0,5,100],
+          [32,30,20,5],
+          [20,45,25,5],
+          [20,60,30,5],
+          [],
+          [80,0,15,15,"meta"],
+          [0,5,10,10,"start"],
+          [75,15,20,20,"lives"],
+          [75,35,20,20,"time"]
+        ]
+      ],
+      build(stage = 0){
+        console.log(this.wallsTemplates[stage]);
+        for(w of this.wallsTemplates[stage]){
+            this.singleWall(w[0],w[1],w[2],w[3],w[4]);
+        }
+      },
+      singleWall(x,y,w,h,type = "wall"){
+        let wall = document.createElement("div");
+        game.plane.append(wall);
+        wall.style.width = w + "%";
+        wall.style.height = h + "%";
+        wall.style.marginLeft = x + "%";
+        wall.style.marginTop = y + "%";
+        wall.style.border = "solid 1px #000";
+        wall.className = type;
+        if(type == "meta"){
+          wall.style.backgroundColor = "blue";
+        }else if(type == "start"){
+          wall.onclick = () => {game.start(); }
+          wall.style.backgroundColor = "green";
+        }else if(type == "lives" || type =="time"){
+          wall.style.backgroung = "";
+        }else{
+          wall.style.backgroundColor = "red";
+        }
+
+
+
+      }
+    },
+
+    start(){
+      console.log("start");
+      document.querySelector(".start").onclick = () => {console.log("a, a, a, nie ma tak łatwo")};
+      document.querySelector(".meta").onmouseover = () => {game.over(true);};
+      let walls = document.querySelectorAll(".wall");
+      for(w of walls){
+        w.onmouseover = () =>{console.log("walnąłeś");}
+      }
+
+      //wall.onmouseover = () =>{ game.over(true);}
+    },
+
+    over(isWin){
+      if(isWin){
+        console.log("wygrałeś");
+      }else{
+        console.log("przegrałeś");
+      };
+      document.querySelector(".start").onclick = () => {};
+      document.querySelector(".meta").onmouseover = () => {};
+      let walls = document.querySelectorAll(".wall");
+      for(w of walls){
+        w.onmouseover = () =>{}
+      }
+
+    }
+
+  };
+  game.walls.build(0);
+
+  //set size of game.plan
+  window.onresize = ()=>{
+    game.setPlane();
+  }
+
+  game.setPlane();
+
+</script>
+
+</body>
+</html>

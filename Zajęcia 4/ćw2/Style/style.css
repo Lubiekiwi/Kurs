@@ -1,0 +1,115 @@
+body header, body .secMain, body .secMain article, body .secMain div, body .grid, body footer, body footer div {
+  border: 2px dotted #140d0d;
+  margin: 1%;
+}
+
+body header, body .secMain div, body footer, body footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #aa3333;
+  color: #faefef;
+}
+
+body .secMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body .secMain article {
+  padding: 3%;
+}
+
+body .secMain img {
+  width: 15vw;
+}
+
+body .secMain div {
+  background-color: transparent;
+}
+
+body .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+}
+
+body .grid div {
+  padding: 3%;
+  height: 25vw;
+  border: 1vw solid #aa3333;
+  background-position: center;
+  background-size: cover;
+}
+
+body .grid div:nth-child(1) {
+  background-image: url(../img/d1.jpg);
+  border-color: #be3939;
+}
+
+body .grid div:nth-child(2) {
+  background-image: url(../img/d2.jpg);
+  border-color: #c84848;
+}
+
+body .grid div:nth-child(3) {
+  background-image: url(../img/d3.jpg);
+  border-color: #ce5c5c;
+}
+
+body .grid div:nth-child(4) {
+  background-image: url(../img/d4.jpg);
+  border-color: #d46f6f;
+}
+
+body .grid div:nth-child(5) {
+  background-image: url(../img/d5.jpg);
+  border-color: #da8383;
+}
+
+body .grid div:nth-child(6) {
+  background-image: url(../img/d6.jpg);
+  border-color: #e09696;
+}
+
+body .secMain:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .secMain:nth-child(2) div {
+  background-color: #faefef;
+}
+
+body footer div {
+  padding: 1%;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,142 @@
+body{
+    background-color:rgb(182, 83, 44);
+    font-size:18px;
+    color:rgb(248, 227, 212);
+}
+*{
+    box-sizing:border-box;
+}
+header{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    padding:10px;
+}
+.logo{
+    background-color:rgb(185, 103, 70);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+.kwiat{
+    width:90px;
+    height:90px;
+    background:url("sprites.jpg");
+}
+.kwiat:hover{
+    background-position:0 -90px;
+}
+.kwiat:active{
+    background-position:0 -180px;
+}
+.nav{
+    display:flex;
+}
+.nav1{
+    margin:5px;
+    border-left:2px dashed red;
+    padding:5px;
+}
+.absolutne{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+    border:2px solid  rgb(99, 54, 37);
+}
+h3{
+    width:100%;
+    text-align:left;
+}
+.jedn1{
+    background-color:rgb(185, 103, 70);
+    display:flex;
+    padding-bottom:40px;
+    width:600px;
+    justify-content:space-around;
+}
+.px{
+    border:2px solid  rgb(99, 54, 37);
+    width:50px;
+    height:200px;
+    background-color:rgb(150, 81, 56);
+}
+.cm{
+    border:2px solid  rgb(99, 54, 37);
+    width:50px;
+    height:5cm;
+    background-color:rgb(150, 81, 56);
+}
+.cal{
+    border:2px solid  rgb(99, 54, 37);
+    width:50px;
+    height:2cal;
+    background-color:rgb(150, 81, 56);
+}
+.mm{
+    border:2px solid  rgb(99, 54, 37);
+    width:50px;
+    height:50mm;
+    background-color:rgb(150, 81, 56);
+}
+.pt{
+    border:2px solid  rgb(99, 54, 37);
+    width:50px;
+    height:10pt;
+    background-color:rgb(150, 81, 56);
+}
+.pc{
+    border:2px solid  rgb(99, 54, 37);
+    width:50px;
+    height:20pc;
+    background-color:rgb(150, 81, 56);
+}
+.relatywne{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:20px;
+}
+.jedn2{
+    background-color:rgb(185, 103, 70);
+    display:flex;
+    flex-direction:column;
+    padding-right:40px;
+    height:200px;
+    justify-content:space-around;
+}
+.procent{
+    border:2px solid  rgb(99, 54, 37);
+    width:25%;
+    height:50px;
+    background-color:rgb(150, 81, 56);
+}
+.wym{
+    border:2px solid  rgb(99, 54, 37);
+    width:25vw;
+    height:50px;
+    background-color:rgb(150, 81, 56);
+}
+.czcionki{
+    border:2px solid  rgb(99, 54, 37);
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+}
+.jak{
+    width:100%;
+    display:flex;
+    justify-content: flex-end;
+}
+.p1{
+    font-size:1em;
+}
+.p2{
+    font-size:2em;
+}
+.p3{
+    font-size:3em;
+}

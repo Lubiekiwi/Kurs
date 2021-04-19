@@ -1,0 +1,89 @@
+
+%borders{
+    border:2px dotted rgb(20, 13, 13);
+    margin:1%;
+}
+%flexy{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+$bg:rgb(170, 51, 51);
+$c:rgb(250, 239, 239);
+
+@mixin art($row){
+    display:flex;
+    flex-direction: $row;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    width:100%;
+    background:$bg;
+    color:$c;
+    
+    header{
+        @extend %borders;
+        @extend %flexy;
+    }
+    .secMain{
+        @extend %borders;
+        @include art(row-reverse);
+        article{
+            @extend %borders;
+            padding:3%;
+        }
+        img{
+            width:15vw;
+        }
+        div{
+            @extend %flexy;
+            @extend %borders; 
+            // background-color:$c;
+            background-color:transparent;
+        }
+    }
+    .grid{
+        @extend %borders;
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        div{
+            padding:3%;
+            height:25vw;
+            border:1vw solid $bg;
+            background-position:center;
+            background-size:cover;
+            @for $i from 1 through 6{
+                &:nth-child(#{$i}){
+                    background-image: url(../img/d#{$i}.jpg);
+                    border-color:lighten($bg, 5%*$i);
+                }
+            }
+            
+        }
+    }
+    .secMain{
+        &:nth-child(2){
+            @include art(row);
+            div{
+                // background-color:transparent;
+                background-color:$c;
+            }
+        }
+        // @include art(row-reverse);
+        // @extend %borders; 
+    }
+    footer{
+        @extend %borders;
+        @extend %flexy;
+        div{
+            @extend %borders;
+            @extend %flexy;
+            padding:1%;
+        }
+    }
+}

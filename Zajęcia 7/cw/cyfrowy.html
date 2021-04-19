@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="title">
+        <div><h1>Przygody Pana Cyfrowego</h1></div>
+    </div>
+    <div id="subtitle">
+        <div class="gif"></div>
+        <div class="gif"></div>
+        <div class="gif"></div>
+        <div class="gif"></div>
+    </div>
+    <div id="content">
+        <div id="left"></div>
+        <div id="right"></div>
+
+    </div>
+    <div id="footer">
+        Strona stworzona przez Martę
+    </div>
+
+    <script src="../jQuery.js"></script>
+    <script>
+        let data = [
+            {
+                "src": "img/gada.gif",
+                "decs": "pan cyfrowy se gada"
+            },
+            {
+                "src": "img/siada.gif",
+                "decs": "pan cyfrowy se siada"
+            },
+            {
+                "src": "img/majta nogą.gif",
+                "decs": "pan cyfrowy se majta"
+            },
+            {
+                "src": "img/wstaje.gif",
+                "decs": "pan cyfrowy se wstaje"
+            }
+        ];
+        for(let i = 0; i<data.length; i++){
+            let img = createImg(i);            
+            let dom = $ ("#subtitle").children();
+            $(dom[i])
+                .append(img)
+                .click(()=>{
+                    let newImg = createImg(i);
+                    let output = $("#content").children();
+                    console.log(output);
+                    $(output[0]).html(newImg);
+                    $(output[1]).html(data[i].decs);
+
+                })
+        }
+
+        function createImg(i){
+            let img = document.createElement("img");
+                $(img).attr({
+                    "src":data[i].src,
+                    "alt":data[i].decs
+                });
+            return img;
+        }
+    </script>
+</body>
+</html>

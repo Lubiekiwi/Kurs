@@ -1,0 +1,44 @@
+[
+    {
+        "name":"Łukasz",
+        "surname":"Kaszub",
+        "position":"Inżynier",
+        "count":"5"
+    },
+    {
+        "name":"Krystian",
+        "surname":"Kościelniak",
+        "position":"Menadżer",
+        "count":"3"
+    },
+    {
+        "name":"Grażyna",
+        "surname":"Pudełko",
+        "position":"Specjalista ds. wytłaczania",
+        "count":"2"
+    },
+    {
+        "name":"Justyna",
+        "surname":"Kaszub",
+        "position":"Kierownik ds. HR",
+        "count":"7"
+    },
+    {
+        "name":"Aneta",
+        "surname":"Kotleta",
+        "position":"Coath",
+        "count":"4"
+    },
+    {
+        "name":"Dolores",
+        "surname":"Marchewka",
+        "position":"Inżynier",
+        "count":"5"
+    },
+    {
+        "name":"Filip",
+        "surname":"Lipka",
+        "position":"Instruktor jogi",
+        "count":"3"
+    }
+]

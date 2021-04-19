@@ -1,0 +1,70 @@
+%fleksy{
+    display:flex;
+    text-align: center;
+    justify-content:space-around;
+}
+$pad: 1vw;
+
+*{
+    box-sizing: border-box;
+}
+html{height:100vh;};
+body{
+    height:100%;
+    #root{
+        height:100%;
+        .App{
+            height:100%;
+        }
+    };
+    .jasny{
+        background-color:rgb(253, 244, 244);
+        color:rgb(102, 4, 4);
+    };
+    .ciemny{
+        color:rgb(253, 244, 244);
+        background-color:rgb(102, 4, 4);
+    };
+    .button{
+        text-align:right;
+    };
+    header{
+        @extend %fleksy;
+        flex-direction:column;
+        border:lightsalmon dashed 2px;
+        padding:$pad;
+        nav{
+            @extend %fleksy;
+            border:rgb(190, 18, 84) dashed 2px;
+            padding:$pad;
+            margin-top:1vw;
+            a{
+                color:inherit;
+                text-decoration:none;
+                .navi{
+                    @extend %fleksy;
+                    border:lightsalmon dashed 2px;
+                    padding:$pad;
+                }
+            }
+        }
+    };
+    article{
+        @extend %fleksy;
+        border:rgb(190, 18, 84) dashed 2px;
+        padding:$pad;
+        align-items: center;
+        .opis{
+            text-align:left;
+            padding:$pad;
+            width:70%;
+        };
+        .img{
+            padding:$pad;
+            width:27%;
+            img{
+                width:100%;
+            }
+        }
+    }
+}

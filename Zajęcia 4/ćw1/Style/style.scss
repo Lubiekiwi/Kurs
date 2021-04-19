@@ -1,0 +1,12 @@
+body{
+    background-color:rgb(136, 33, 33);
+    p{
+        color:rosybrown;
+    }
+}
+
+@for $i from 1 through 5{
+    .listitems#($i){
+        background-color:lighten(#000, 25%*$i)
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+</head>
+<body>
+    <p class="s1">Siema</p>
+    <p class="s2">Siema 2</p>
+    <button>click me</button>
+
+    <script src="jQuery.js"></script>
+    <script>
+        // $("p").hide();
+        // $(".s2").show();
+        $("button").click(() => {
+            $("p").slideToggle(1000);
+        })
+
+        $(".s2").animate(
+            {
+                "margin-left": "20px",
+                "margin-right": "60px"
+            }
+        )
+
+        $(".s2").css({
+            "color": "red",
+            "border":"2px dashed red"
+        })
+
+        let v = $(".s1").html("Elo");
+        console.log(v)
+
+
+    </script>
+    
+</body>
+</html>
